@@ -518,9 +518,8 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 
 ####### Compile
 
-debug/main.o: ../Valkyrie_GCS/main.cpp ../Valkyrie_GCS/mainwindow.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/QMainWindow \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qmainwindow.h \
+debug/main.o: ../Valkyrie_GCS/main.cpp ../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/QApplication \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qapplication.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qtguiglobal.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qglobal.h \
@@ -546,22 +545,20 @@ debug/main.o: ../Valkyrie_GCS/main.cpp ../Valkyrie_GCS/mainwindow.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qversiontagging.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qtgui-config.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qtwidgets-config.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qwidget.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qwindowdefs.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qobjectdefs.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qnamespace.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qobjectdefs_impl.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qwindowdefs_win.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qobject.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qcoreapplication.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qstring.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qchar.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qbytearray.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qrefcount.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qnamespace.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qarraydata.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qstringliteral.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qstringalgorithms.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qstringview.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qstringbuilder.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qobject.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qobjectdefs.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qobjectdefs_impl.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qlist.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qalgorithms.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qiterator.h \
@@ -577,11 +574,17 @@ debug/main.o: ../Valkyrie_GCS/main.cpp ../Valkyrie_GCS/mainwindow.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qvarlengtharray.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qcontainerfwd.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qobject_impl.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qeventloop.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qwindowdefs.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qwindowdefs_win.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qpoint.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qsize.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qcursor.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qdesktopwidget.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qwidget.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qmargins.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qpaintdevice.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qrect.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qsize.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qpoint.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qpalette.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qcolor.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qrgb.h \
@@ -607,7 +610,6 @@ debug/main.o: ../Valkyrie_GCS/main.cpp ../Valkyrie_GCS/mainwindow.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qfontmetrics.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qfontinfo.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qsizepolicy.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qcursor.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qkeysequence.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qevent.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qvariant.h \
@@ -623,15 +625,13 @@ debug/main.o: ../Valkyrie_GCS/main.cpp ../Valkyrie_GCS/mainwindow.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qfiledevice.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qvector2d.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qtouchdevice.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qtabwidget.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qicon.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/QApplication \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qapplication.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qcoreapplication.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qeventloop.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qguiapplication.h \
-		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qinputmethod.h
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qinputmethod.h \
+		../Valkyrie_GCS/mainwindow.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/QMainWindow \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qmainwindow.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qtabwidget.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qicon.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\Valkyrie_GCS\main.cpp
 
 debug/mainwindow.o: ../Valkyrie_GCS/mainwindow.cpp ../Valkyrie_GCS/mainwindow.h \
@@ -741,7 +741,23 @@ debug/mainwindow.o: ../Valkyrie_GCS/mainwindow.cpp ../Valkyrie_GCS/mainwindow.h 
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qtouchdevice.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qtabwidget.h \
 		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qicon.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/QVariant \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/QApplication \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qapplication.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qcoreapplication.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtCore/qeventloop.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qdesktopwidget.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qguiapplication.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtGui/qinputmethod.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/QMenuBar \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qmenubar.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qmenu.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qaction.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qactiongroup.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/QStatusBar \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/qstatusbar.h \
+		../../../programs/QT2/5.12.4/mingw73_32/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\Valkyrie_GCS\mainwindow.cpp
 
 debug/vyfakeserialin.o: ../Valkyrie_GCS/vyfakeserialin.cpp ../Valkyrie_GCS/vyfakeserialin.h \

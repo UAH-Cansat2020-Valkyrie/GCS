@@ -223,6 +223,7 @@ Makefile: ../Valkyrie_GCS/Valkyrie_GCS.pro ../../../programs/QT2/5.12.4/mingw73_
 		../../../programs/QT2/5.12.4/mingw73_32/mkspecs/features/qt_config.prf \
 		../../../programs/QT2/5.12.4/mingw73_32/mkspecs/win32-g++/qmake.conf \
 		../../../programs/QT2/5.12.4/mingw73_32/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../programs/QT2/5.12.4/mingw73_32/mkspecs/features/exclusive_builds.prf \
 		../../../programs/QT2/5.12.4/mingw73_32/mkspecs/features/toolchain.prf \
 		../../../programs/QT2/5.12.4/mingw73_32/mkspecs/features/default_pre.prf \
@@ -415,6 +416,7 @@ Makefile: ../Valkyrie_GCS/Valkyrie_GCS.pro ../../../programs/QT2/5.12.4/mingw73_
 ../../../programs/QT2/5.12.4/mingw73_32/mkspecs/features/qt_config.prf:
 ../../../programs/QT2/5.12.4/mingw73_32/mkspecs/win32-g++/qmake.conf:
 ../../../programs/QT2/5.12.4/mingw73_32/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../programs/QT2/5.12.4/mingw73_32/mkspecs/features/exclusive_builds.prf:
 ../../../programs/QT2/5.12.4/mingw73_32/mkspecs/features/toolchain.prf:
 ../../../programs/QT2/5.12.4/mingw73_32/mkspecs/features/default_pre.prf:
