@@ -41,7 +41,7 @@ public:
     QSerialPort *port;
     QObject *parent;
     QPlainTextEdit *term;
-
+    bool spoof;
     void parseData(QByteArray buff);
     void writeData(QString data);
 
@@ -70,7 +70,8 @@ public:
 public slots:
     void readData();
 
-
+private:
+    void genTelemetry(void);
     //VySerialIn();
 };
 

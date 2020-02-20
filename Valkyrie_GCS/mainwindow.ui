@@ -38,14 +38,49 @@
     <property name="title">
      <string>View</string>
     </property>
+    <addaction name="actionToggle_Darkmode"/>
    </widget>
    <widget class="QMenu" name="menuSerial_Settings">
     <property name="title">
      <string>Serial Settings</string>
     </property>
-    <addaction name="actionPort"/>
-    <addaction name="actionBaud_Rate"/>
-    <addaction name="actionStop_Bits"/>
+    <widget class="QMenu" name="menuPort">
+     <property name="title">
+      <string>Port</string>
+     </property>
+     <addaction name="separator"/>
+    </widget>
+    <widget class="QMenu" name="menuBaud_Rate">
+     <property name="title">
+      <string>Baud Rate</string>
+     </property>
+     <addaction name="action9600"/>
+     <addaction name="action9600_2"/>
+    </widget>
+    <widget class="QMenu" name="menuStop_Bits">
+     <property name="title">
+      <string>Stop Bits</string>
+     </property>
+     <addaction name="action2"/>
+     <addaction name="action1"/>
+     <addaction name="action0"/>
+    </widget>
+    <widget class="QMenu" name="menuParity">
+     <property name="title">
+      <string>Parity</string>
+     </property>
+     <addaction name="actionNone"/>
+     <addaction name="actionOdd"/>
+     <addaction name="actionEven"/>
+     <addaction name="actionMark"/>
+     <addaction name="actionSpace"/>
+    </widget>
+    <addaction name="menuPort"/>
+    <addaction name="menuBaud_Rate"/>
+    <addaction name="menuStop_Bits"/>
+    <addaction name="menuParity"/>
+    <addaction name="separator"/>
+    <addaction name="actionReset_Defaults"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -61,21 +96,6 @@
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionPort">
-   <property name="text">
-    <string>Port</string>
-   </property>
-  </action>
-  <action name="actionBaud_Rate">
-   <property name="text">
-    <string>Baud Rate</string>
-   </property>
-  </action>
-  <action name="actionStop_Bits">
-   <property name="text">
-    <string>Stop Bits</string>
-   </property>
-  </action>
   <action name="actionAbout">
    <property name="text">
     <string>About</string>
@@ -111,6 +131,66 @@
    </property>
    <property name="toolTip">
     <string>Exit (Ctrl+Q)</string>
+   </property>
+  </action>
+  <action name="action9600">
+   <property name="text">
+    <string>115200</string>
+   </property>
+  </action>
+  <action name="action9600_2">
+   <property name="text">
+    <string>9600</string>
+   </property>
+  </action>
+  <action name="action2">
+   <property name="text">
+    <string>2</string>
+   </property>
+  </action>
+  <action name="action1">
+   <property name="text">
+    <string>1</string>
+   </property>
+  </action>
+  <action name="action0">
+   <property name="text">
+    <string>0</string>
+   </property>
+  </action>
+  <action name="actionNone">
+   <property name="text">
+    <string>None</string>
+   </property>
+  </action>
+  <action name="actionOdd">
+   <property name="text">
+    <string>Odd</string>
+   </property>
+  </action>
+  <action name="actionEven">
+   <property name="text">
+    <string>Even</string>
+   </property>
+  </action>
+  <action name="actionMark">
+   <property name="text">
+    <string>Mark</string>
+   </property>
+  </action>
+  <action name="actionSpace">
+   <property name="text">
+    <string>Space</string>
+   </property>
+  </action>
+  <action name="actionReset_Defaults">
+   <property name="text">
+    <string>Reset Defaults</string>
+   </property>
+  </action>
+  <action name="actionToggle_Darkmode">
+   <property name="text">
+    <string>Toggle Darkmode</string>
    </property>
   </action>
  </widget>

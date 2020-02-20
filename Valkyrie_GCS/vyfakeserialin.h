@@ -8,6 +8,9 @@
 #include <QPlainTextEdit>
 #include "vyserialin.h"
 
+
+
+
 class VyFakeSerialIn: public QObject
 {
     Q_OBJECT
@@ -48,6 +51,27 @@ public:
 public slots:
     void readData();
 
+private:
+
+    //struct telemetry{
+
+    //    QString teamID;
+    //    int missionTime;
+    //    int packetCount;
+    //    double altitude;
+    //    double pressure;
+    //    double temp;
+    //    double voltage;
+    //    double gpsTime;
+    //    double gpsLat;
+    //    double gpsLong;
+    //    double gpsAlt;
+    //    double gpsSats;
+    //    double airspeed;
+    //    int softwareState;
+    //    int particleCount;
+    //};
+    void generateData(QByteArray &readBuffer);
 
     //VyFakeSerialIn();
 };

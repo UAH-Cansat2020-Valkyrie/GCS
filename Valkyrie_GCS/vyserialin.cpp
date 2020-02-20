@@ -21,10 +21,14 @@ VySerialIn::~VySerialIn(){
 int VySerialIn::openPort(QString portName){
     if(portName!=nullptr)
         port->setPortName(portName);
-    if(port->open(QIODevice::ReadWrite)){
+    else if(port->open(QIODevice::ReadWrite)){
+        this->spoof = false;
         return 0;
     } else{
         qInfo("Error: Could not open Port");
+        this->spoof = true;
+        qInfo("%f, %i, %i, %f, %f, %f, %f, %f, %f, %f, %f, %f, %f, %i, %i\n",
+              data.teamID, data.missionTime, data.packetCount, data.altitude, data.pressure,data.temp,data.voltage,data.gpsTime,data.gpsLat,data.gpsLong,data.gpsSats,data.airspeed,data.softwareState,data.particleCount);
         return -1;
     }
 }
@@ -103,12 +107,18 @@ void VySerialIn::parseData(QByteArray buff)
 
 }
 void VySerialIn::readData(){
-    readBuffer.append(port->readAll());
-    if (readBuffer.endsWith("\n")){
+    if(!spoof){
+        readBuffer.append(port->readAll());
+        if (readBuffer.endsWith("\n")){
 
-      parseData(readBuffer);
-      readBuffer.clear();
+          parseData(readBuffer);
+          readBuffer.clear();
+        }
     }
+    else{
+        genTelemetry();
+    }
+
 }
 
 
@@ -119,5 +129,25 @@ void VySerialIn::writeData(QString data)
     port->waitForBytesWritten(50);
 }
 
+
+void VySerialIn::genTelemetry(){
+
+
+
+    data.teamID = TEAM_ID;
+    data.missionTime = data.missionTime+1;
+    data.packetCount = data.packetCount+1;
+    data.altitude = alt;
+    data.pressure = pres;
+    data.temp = temp;
+    data.voltage = vol;
+    data.gpsTime = gtime;
+    data.gpsLat = glat;
+    data.gpsLong = glong;
+    data.gpsAlt = galt;
+    data.gpsSats = gsats;
+    data.softwareState = state;
+    data.particleCount = particle;
+}
 
 

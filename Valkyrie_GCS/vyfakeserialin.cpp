@@ -103,12 +103,7 @@ void VyFakeSerialIn::parseData(QByteArray buff)
 
 }
 void VyFakeSerialIn::readData(){
-    readBuffer.append(port->readAll());
-    if (readBuffer.endsWith("\n")){
 
-      parseData(readBuffer);
-      readBuffer.clear();
-    }
 }
 
 
@@ -120,5 +115,34 @@ void VyFakeSerialIn::writeData(QString data)
 }
 
 
+
+//struct telemetry{
+
+//    QString teamID;
+//    int missionTime;
+//    int packetCount;
+//    double altitude;
+//    double pressure;
+//    double temp;
+//    double voltage;
+//    double gpsTime;
+//    double gpsLat;
+//    double gpsLong;
+//    double gpsAlt;
+//    double gpsSats;
+//    double airspeed;
+//    int softwareState;
+//    int particleCount;
+//};
+void VyFakeSerialIn::generateData(QByteArray &readBuffer)
+{
+    QString teamId = "An I Oop";
+    int missionTime = 0;
+    int packetCount = 0;
+    double altitude = 0;
+#ifdef TEAM_ID
+
+#endif
+}
 
 
